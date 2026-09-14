@@ -1,10 +1,11 @@
 #include "shared_types.h"
+#include <iostream>
+
 using namespace std;
 
-Result processStudentB(const InputData& data) {
-    cout << "[Student B(Vorona)] Processing data...\n";
-    Result res;
-    res.calculatedValue = 0.0;
-    res.isSuccess = true;
-    return res;
+unique_ptr<Result> calculateB(shared_ptr<const InputData> data)
+{
+    cout << "[Student B] Processing data...\n";
+
+    return make_unique<Result>(Result{ 0.0, 0.0 });
 }
