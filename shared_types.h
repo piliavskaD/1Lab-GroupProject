@@ -1,24 +1,33 @@
 #ifndef SHARED_TYPES_H
 #define SHARED_TYPES_H
 
-#include <iostream>
 #include <vector>
+#include <memory>
+
 using namespace std;
 
-// Структура вхідних даних
-struct InputData {
-    vector<double> values;
-    int parameter = 0;
+struct Point
+{
+    double x;
+    double y;
 };
 
-// Структура результату
-struct Result {
-    double calculatedValue = 0.0;
-    bool isSuccess = false;
+struct InputData
+{
+    vector<Point> points;
+    double x0;
 };
 
-// Заглушки функцій для двох студентів
-Result processStudentA(const InputData& data);
-Result processStudentB(const InputData& data);
+struct Result
+{
+    double value;
+    double estimatedError;
+};
+
+unique_ptr<Result> calculateA(
+    shared_ptr<const InputData> data);
+
+unique_ptr<Result> calculateB(
+    shared_ptr<const InputData> data);
 
 #endif // SHARED_TYPES_H
