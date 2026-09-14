@@ -1,8 +1,9 @@
 #include <iostream>
 #include "shared_types.h"
+using namespace std;
 
 int main() {
-    std::cout << "--- Lab 1 Group Project ---\n";
+    cout << "--- Lab 1 Group Project ---\n";
 
     InputData input;
     input.parameter = 10;
@@ -10,8 +11,8 @@ int main() {
     Result resA = processStudentA(input);
     Result resB = processStudentB(input);
 
-    std::cout << "Student A execution success: " << std::boolalpha << resA.isSuccess << "\n";
-    std::cout << "Student B execution success: " << std::boolalpha << resB.isSuccess << "\n";
+    cout << "Student A(Piliavska) execution success: " << std::boolalpha << resA.isSuccess << "\n";
+    cout << "Student B(Vorona) execution success: " << std::boolalpha << resB.isSuccess << "\n";
 
     return 0;
 }
