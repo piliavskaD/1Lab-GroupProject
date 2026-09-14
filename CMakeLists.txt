@@ -9,6 +9,6 @@ add_executable(
     Lab1App
     main.cpp
     shared_types.h
-    student_a.cpp
-    student_b.cpp
+    Piliavska_a.cpp
+    Vorona_b.cpp
 )
