@@ -3,10 +3,11 @@
 
 #include <iostream>
 #include <vector>
+using namespace std;
 
 // Структура вхідних даних
 struct InputData {
-    std::vector<double> values;
+    vector<double> values;
     int parameter = 0;
 };
 
