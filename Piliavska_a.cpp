@@ -1,7 +1,8 @@
 #include "shared_types.h"
+using namespace std;
 
 Result processStudentA(const InputData& data) {
-    std::cout << "[Student A] Processing data...\n";
+    cout << "[Student A(Piliavska)] Processing data...\n";
     Result res;
     res.calculatedValue = 0.0;
     res.isSuccess = true;
