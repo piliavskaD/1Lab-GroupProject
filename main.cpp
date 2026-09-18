@@ -19,10 +19,15 @@ int main()
 
     auto data = make_shared<const InputData>(rawData);
 
+    auto resultA = calculateA(data);
     auto resultB = calculateB(data);
+
+    auto [valueA, errorA] = *resultA;
     auto [valueB, errorB] = *resultB;
 
+    cout << "Student A result: " << valueA << ", deviation: " << errorA << "\n";
     cout << "Student B result: " << valueB << ", error: " << errorB << "\n";
+
 
     return 0;
 }
