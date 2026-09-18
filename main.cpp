@@ -22,7 +22,7 @@ int main()
     auto resultA = calculateA(data);
     auto [valueA, errorA] = *resultA;
 
-    cout << "Student A result: " << valueA << ", error: " << errorA << "\n";
+    cout << "Student A result: " << valueA << ", deviation: " << errorA << "\n";
 
     return 0;
 }
